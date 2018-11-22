@@ -1,0 +1,12 @@
+head
+	link(href='stylesheets/browse.css' rel='stylesheet')
+body
+	div(class ='grid')
+		for movie in list.results
+			div(class= 'flip-card')
+				div(class= 'flip-card-inner')
+					div(class= 'flip-card-front')
+						img.image(src='http://image.tmdb.org/t/p/w342/'+movie.poster_path)
+					div(class= 'flip-card-back')
+						h2(class= 'title')= movie.title
+						p(class= 'description')= movie.overview
